@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  client:
+    build: ../app
+    image: weare-app
+    container_name: weare-app
+    ports: 
+      - "8081:8081"
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    name: project-weare
